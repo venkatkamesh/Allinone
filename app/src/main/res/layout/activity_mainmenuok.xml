@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_mainmenuok_fuck"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.venkatkamesh.allinone.mainmenuok">
+
+    <Button
+        android:text="First 3 colors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lol" />
+
+    <Button
+        android:text="Sound player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lol1" />
+
+    <Button
+        android:text="Third"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lol2" />
+
+</LinearLayout>
