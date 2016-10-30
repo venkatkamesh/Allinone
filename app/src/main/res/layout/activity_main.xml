@@ -9,8 +9,12 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.venkatkamesh.allinone.MainActivity">
-
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <Button
         android:text="Greetings"
         android:layout_width="fill_parent"
@@ -71,4 +75,30 @@
         android:layout_below="@+id/animation_ok"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+    <Button
+        android:text="Picture Shades"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/damnshades"
+        android:layout_below="@+id/music"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:text="Assets Load"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/assetsok"
+        android:layout_below="@+id/damnshades"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:text="Contact view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contactsok"
+        android:layout_below="@+id/assetsok"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    </RelativeLayout>
+</ScrollView>
 </RelativeLayout>

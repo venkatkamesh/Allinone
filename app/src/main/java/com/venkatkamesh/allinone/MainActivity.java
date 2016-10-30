@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button buttonok;
     Button greeting;
     Button buttoncalculator;
-    Button menuactivity, sms_ok, animation_ok;
+    Button menuactivity, sms_ok, animation_ok, damnshades, assetsok, contactsok;
     Button music;
     String tag = "LifeCycleEvents";
     @Override
@@ -25,8 +25,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonok.setOnClickListener(this);
         greeting = (Button)findViewById(R.id.greeting);
         greeting.setOnClickListener(this);
+        contactsok = (Button)findViewById(R.id.contactsok);
+        contactsok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent("com.venkatkamesh.allinone.ContactsView"));
+            }
+        });
         buttoncalculator = (Button)findViewById(R.id.buttoncalculator);
         buttoncalculator.setOnClickListener(this);
+        assetsok =(Button)findViewById(R.id.assetsok);
+        assetsok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent("com.venkatkamesh.allinone.assets"));
+            }
+        });
+        damnshades =(Button)findViewById(R.id.damnshades);
+        damnshades.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent("com.venkatkamesh.allinone.shades"));
+            }
+        });
         music =(Button)findViewById(R.id.music);
         music.setOnClickListener(new View.OnClickListener() {
             @Override

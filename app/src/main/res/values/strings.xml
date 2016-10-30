@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">All in one</string>
-    <string name="title_activity_menuactivity">menuactivity</string><string name="play">Play</string>
+    <string name="title_activity_menuactivity">menuactivity</string>
+    <string name="play">Play</string>
 </resources>
