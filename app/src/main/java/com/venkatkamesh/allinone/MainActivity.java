@@ -1,5 +1,6 @@
 package com.venkatkamesh.allinone;
 
+import android.Manifest;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,9 +9,9 @@ import android.content.Intent;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener
+public class MainActivity extends AbsRuntimePermission implements View.OnClickListener 
 {
-
+    private static final int REQUEST_PERMISSION =10;
     Button buttonok;
     Button greeting;
     Button buttoncalculator;
@@ -26,6 +27,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         greeting = (Button)findViewById(R.id.greeting);
         greeting.setOnClickListener(this);
         contactsok = (Button)findViewById(R.id.contactsok);
+		requestAppPermissions(new String[]{
+                        Manifest.permission.SEND_SMS,
+                        Manifest.permission.READ_EXTERNAL_STORAGE,
+						Manifest.permission.READ_CONTACTS},
+                R.string.msg,REQUEST_PERMISSION);
+
+
         contactsok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,42 +86,48 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
         Log.d(tag, "In the onCreate() event");
     }
-    public void onStart()
-    {
-        Toast.makeText(getApplicationContext(),"start", Toast.LENGTH_LONG).show();
-        super.onStart();
-        Log.d(tag, "In the onStart() event");
+
+    @Override
+    public void onPermissionsGranted(int requestCode) {
+
     }
-    public void onRestart()
-    {
-        Toast.makeText(getApplicationContext(),"Restart",Toast.LENGTH_LONG).show();
-        super.onRestart();
-        Log.d(tag, "In the onRestart() event");
-    }
-    public void onResume()
-    {
-        Toast.makeText(getApplicationContext(),"Resume",Toast.LENGTH_LONG).show();
-        super.onResume();
-        Log.d(tag, "In the onResume() event");
-    }
-    public void onPause()
-    {
-        Toast.makeText(getApplicationContext(),"pause",Toast.LENGTH_LONG).show();
-        super.onPause();
-        Log.d(tag, "In the onPause() event");
-    }
-    public void onStop()
-    {
-        Toast.makeText(getApplicationContext(),"stop",Toast.LENGTH_LONG).show();
-        super.onStop();
-        Log.d(tag, "In the onStop() event");
-    }
-    public void onDestroy()
-    {
-        Toast.makeText(getApplicationContext(),"Destroy",Toast.LENGTH_LONG).show();
-        super.onDestroy();
-        Log.d(tag, "In the onDestroy() event");
-    }
+    /* Life Cycle of the code
+        public void onStart()
+        {
+            Toast.makeText(getApplicationContext(),"start", Toast.LENGTH_LONG).show();
+            super.onStart();
+            Log.d(tag, "In the onStart() event");
+        }
+        public void onRestart()
+        {
+            Toast.makeText(getApplicationContext(),"Restart",Toast.LENGTH_LONG).show();
+            super.onRestart();
+            Log.d(tag, "In the onRestart() event");
+        }
+        public void onResume()
+        {
+            Toast.makeText(getApplicationContext(),"Resume",Toast.LENGTH_LONG).show();
+            super.onResume();
+            Log.d(tag, "In the onResume() event");
+        }
+        public void onPause()
+        {
+            Toast.makeText(getApplicationContext(),"pause",Toast.LENGTH_LONG).show();
+            super.onPause();
+            Log.d(tag, "In the onPause() event");
+        }
+        public void onStop()
+        {
+            Toast.makeText(getApplicationContext(),"stop",Toast.LENGTH_LONG).show();
+            super.onStop();
+            Log.d(tag, "In the onStop() event");
+        }
+        public void onDestroy()
+        {
+            Toast.makeText(getApplicationContext(),"Destroy",Toast.LENGTH_LONG).show();
+            super.onDestroy();
+            Log.d(tag, "In the onDestroy() event");
+        }*/
     private void buttonclick()
     {
         startActivity(new Intent("com.venkatkamesh.allinone.toast2") );

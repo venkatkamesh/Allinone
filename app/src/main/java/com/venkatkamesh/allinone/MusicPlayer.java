@@ -34,12 +34,7 @@ public class MusicPlayer extends AppCompatActivity {
         dialog.setMessage("Please wait, Fetching Songs...");
         dialog.setCancelable(true);
         dialog.show();
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(MusicPlayer.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
-
-        } else {
-
-        }
+ 
         while(!fs.getfetchstatus()){
             mySongs=fs.findSongs(Environment.getExternalStorageDirectory());
         }
