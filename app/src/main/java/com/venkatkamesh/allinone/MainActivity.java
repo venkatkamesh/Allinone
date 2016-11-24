@@ -30,6 +30,7 @@ public class MainActivity extends AbsRuntimePermission implements View.OnClickLi
 		requestAppPermissions(new String[]{
                         Manifest.permission.SEND_SMS,
                         Manifest.permission.READ_EXTERNAL_STORAGE,
+                        Manifest.permission.CAMERA,
 						Manifest.permission.READ_CONTACTS},
                 R.string.msg,REQUEST_PERMISSION);
 

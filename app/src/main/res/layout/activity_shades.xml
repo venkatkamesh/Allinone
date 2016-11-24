@@ -41,4 +41,24 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:id="@+id/shadebtn2" />
+
+    <Button
+        android:text="Gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/shadebtn"
+        android:layout_alignEnd="@+id/shadebtn"
+        android:layout_marginBottom="41dp"
+        android:id="@+id/galleryc" />
+
+    <Button
+        android:text="Camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/camerac"
+        android:layout_alignBaseline="@+id/galleryc"
+        android:layout_alignBottom="@+id/galleryc"
+        android:layout_alignLeft="@+id/shadebtn2"
+        android:layout_alignStart="@+id/shadebtn2" />
 </RelativeLayout>
