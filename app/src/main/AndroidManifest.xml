@@ -2,13 +2,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.venkatkamesh.allinone">
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.UPDATE_DEVICE_STATS"></uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-feature android:name="android.hardware.camera"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-feature android:name="android.hardware.camera.autofocus"/>
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -97,16 +109,18 @@
             <intent-filter>
                 <action android:name="com.venkatkamesh.allinone.shades" />
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
-        <activity android:name=".ContactsView" >
-        <intent-filter>
-            <action android:name="com.venkatkamesh.allinone.ContactsView" />
+        <activity android:name=".ContactsView">
+            <intent-filter>
+                <action android:name="com.venkatkamesh.allinone.ContactsView" />
 
-            <category android:name="android.intent.category.DEFAULT" />
-        </intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity android:name=".assets">
             <intent-filter>
@@ -118,6 +132,41 @@
         <activity android:name=".AlgActivity">
             <intent-filter>
                 <action android:name="com.venkatkamesh.allinone.AlgActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Sensors">
+            <intent-filter>
+                <action android:name="com.venkatkamesh.allinone.Sensors" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Sensorsc">
+            <intent-filter>
+                <action android:name="com.venkatkamesh.allinone.Sensorsc" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".NewActivityBluetooth">
+            <intent-filter>
+                <action android:name="com.venkatkamesh.allinone.NewActivityBluetooth" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".NewActivity_Compass">
+            <intent-filter>
+                <action android:name="com.venkatkamesh.allinone.NewActivity_Compass" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".NewShakeSensor">
+            <intent-filter>
+                <action android:name="com.venkatkamesh.allinone.NewShakeSensor" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

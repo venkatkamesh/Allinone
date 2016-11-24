@@ -15,7 +15,7 @@ public class MainActivity extends AbsRuntimePermission implements View.OnClickLi
     Button buttonok;
     Button greeting;
     Button buttoncalculator;
-    Button menuactivity, sms_ok, animation_ok, damnshades, assetsok, contactsok, algk;
+    Button menuactivity, sms_ok, animation_ok, damnshades, assetsok, contactsok, algk,sensorsk;
     Button music;
     String tag = "LifeCycleEvents";
     @Override
@@ -26,6 +26,13 @@ public class MainActivity extends AbsRuntimePermission implements View.OnClickLi
         buttonok.setOnClickListener(this);
         greeting = (Button)findViewById(R.id.greeting);
         greeting.setOnClickListener(this);
+        sensorsk = (Button)findViewById(R.id.sensorsk);
+        sensorsk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent("com.venkatkamesh.allinone.Sensors"));
+            }
+        });
         algk =(Button)findViewById(R.id.algk);
         algk.setOnClickListener(new View.OnClickListener() {
             @Override

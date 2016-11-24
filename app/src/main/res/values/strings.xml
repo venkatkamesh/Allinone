@@ -2,5 +2,5 @@
     <string name="app_name">All in one</string>
     <string name="title_activity_menuactivity">menuactivity</string>
     <string name="play">Play</string>
-	<string name="msg">Please enable all permission</string>
+    <string name="msg">Please enable all permission</string>
 </resources>
