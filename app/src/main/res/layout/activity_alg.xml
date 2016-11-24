@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/etAry"
+        android:hint="Enter Array Size"
+        android:gravity="center"
+        android:textSize="26dp"/>
+
+
+    <TextView
+        android:textSize="25dp"
+        android:text="Choose Complexity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etAry"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:id="@+id/tvText"
+        android:gravity="center" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:id="@+id/radioGrp"
+        android:layout_below="@+id/tvText"
+        android:layout_alignLeft="@+id/tvText"
+        android:layout_alignStart="@+id/tvText"
+        android:animateLayoutChanges="true"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <RadioButton
+            android:text="BestCase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioBestCase"
+            android:layout_gravity="left"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:text="AvgCase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioAvgCase"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:checked="true"/>
+
+        <RadioButton
+            android:text="WorstCase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioWorstCase"
+            android:layout_gravity="left"
+            android:layout_weight="1"/>
+    </RadioGroup>
+
+    <Button
+        android:onClick="Action"
+        android:text="Generate Array"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGrp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnGenAry" />
+
+    <TextView
+        android:textSize="25dp"
+        android:hint="Array Size will Generates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tvArySize"
+        android:layout_below="@+id/btnGenAry"
+        android:layout_centerHorizontal="true"
+        android:gravity="center" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:id="@+id/GLY">
+        <Button
+            android:onClick="sorting"
+            android:text="Bubble Sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGrp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btnBS" />
+
+        <TextView
+            android:textSize="25dp"
+            android:hint="BubbleSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/tvBS"
+            android:layout_below="@+id/btnGenAry"
+            android:layout_centerHorizontal="true"
+            android:gravity="center" />
+
+        <Button
+            android:onClick="sorting"
+            android:text="Selection Sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGrp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btnSS" />
+
+        <TextView
+            android:textSize="25dp"
+            android:hint="SelectionSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/tvSS"
+            android:layout_below="@+id/btnGenAry"
+            android:layout_centerHorizontal="true"
+            android:gravity="center" />
+
+        <Button
+            android:onClick="sorting"
+            android:text="Merge Sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGrp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btnMS" />
+
+        <TextView
+            android:textSize="25dp"
+            android:hint="MergeSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/tvMS"
+            android:layout_below="@+id/btnGenAry"
+            android:layout_centerHorizontal="true"
+            android:gravity="center" />
+
+        <Button
+            android:onClick="sorting"
+            android:text="Insertion Sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGrp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btnIS" />
+
+        <TextView
+            android:textSize="25dp"
+            android:hint="InsetionSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/tvIS"
+            android:layout_below="@+id/btnGenAry"
+            android:layout_centerHorizontal="true"
+            android:gravity="center" />
+
+        <Button
+            android:onClick="sorting"
+            android:text="Quick Sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGrp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btnQS" />
+
+        <TextView
+            android:textSize="25dp"
+            android:hint="QuickSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/tvQS"
+            android:layout_below="@+id/btnGenAry"
+            android:layout_centerHorizontal="true"
+            android:gravity="center" />
+
+        <Button
+            android:onClick="sorting"
+            android:text="Heap Sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGrp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btnHS" />
+
+        <TextView
+            android:textSize="25dp"
+            android:hint="HeapSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/tvHS"
+            android:layout_below="@+id/btnGenAry"
+            android:layout_centerHorizontal="true"
+            android:gravity="center" />
+
+        <Button
+            android:onClick="sorting"
+            android:text="BenchMark All Sorts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGrp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btnBM" />
+
+        <Button
+            android:onClick="Action"
+            android:text="StartAll"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGrp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btnSA" />
+
+    </GridLayout>
+
+</LinearLayout>
+</ScrollView>
